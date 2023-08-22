@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UIControl;
 using UnityEngine;
 using TMPro;
+using NetworkController;
 
 namespace UIController
 {
@@ -19,12 +20,15 @@ namespace UIController
         public void OnConnectButtonClick(TMP_InputField input)
         {
             string ip_addr = input.text;
-            Debug.Log(ip_addr);
+            CustomNetworkManager.Instance.ChangeDestination(ip_addr);       // Change server IP to connect to
+
+            CustomNetworkManager.Instance.StartClient();
         }
 
-        public void OnCreateButtonClick()
+        public void OnCreateButtonClick(string sceneName)
         {
-            
+            //sceneController.SceneSwitch(sceneName);
+            CustomNetworkManager.Instance.StartHost();
         }
     }
 }
