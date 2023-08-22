@@ -7,6 +7,8 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.Controls;
 
 using Mirror;
+using NetworkController;
+using System.Net.NetworkInformation;
 
 [RequireComponent(typeof(NetworkIdentity))]
 [RequireComponent(typeof(NetworkTransform))]
