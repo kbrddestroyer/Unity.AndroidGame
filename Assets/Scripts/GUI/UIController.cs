@@ -24,7 +24,7 @@ namespace UIController
 
         public void OnCreateButtonClick()
         {
-            // Lobby creation
+            
         }
     }
 }
